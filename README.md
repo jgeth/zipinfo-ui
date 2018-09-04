@@ -1,27 +1,19 @@
 ## ZipInfo UI
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.5.
+ZipInfo UI provides a web application that provides location information for a supplied U.S. Zip Code.
+The application provides interaction with the ZipInfo REST API.
+
+see: https://github.com/jgeth/zipinfo-rest
+
+#### Dependencies
+
+The following dependencies are required to build and run this project from source files:
+
+- NodeJS
+- NPM
 
 ### Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `npm start` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-### Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-### Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-### Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-### Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-### Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+***Note:*** You must configure the proxy.conf.json file to point to a running instance of ZipInfo REST API.
