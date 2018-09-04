@@ -1,0 +1,26 @@
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+</div>
+
+<h2>Get information about a Zip Code</h2>
+
+<div>
+	<form #form="ngForm" novalidate (ngSubmit)="lookup()">
+		<p>Enter Zip Code: <input maxlength="5" type="text" [(ngModel)]="zipcode" #username="ngModel" name="zipcode">
+			<button type="submit">Lookup</button></p>
+	</form>
+</div>
+
+<div *ngIf="error != undefined">
+	<p><b>{{error}}</b></p>
+</div>
+
+<div *ngIf="submitted">
+	<h3>Results for Zip Code {{submittedZipCode}}</h3>
+	<p><b>City:</b> <span *ngIf="results.city != undefined"> {{results.city}}</span>
+		<br><b>Temperature:</b> <span *ngIf="results.temp != undefined && results.temp > 0"> {{results.temp}} degrees Fahrenheit</span>
+		<br><b>Time Zone:</b> <span *ngIf="results.timezone != undefined"> {{results.timezone}}</span>
+		<br><b>Elevation:</b> <span *ngIf="results.elevation != undefined"> {{results.elevation}} feet</span></p>
+</div>
